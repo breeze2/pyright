@@ -10,7 +10,7 @@
  * (e.g. hover information).
  */
 
-import {
+import type {
     ClassNode,
     ExecutionScopeNode,
     FunctionNode,
@@ -19,11 +19,11 @@ import {
     ModuleNode,
     ParseNode,
 } from '../parser/parseNodes';
-import { AnalyzerFileInfo } from './analyzerFileInfo';
+import type { AnalyzerFileInfo } from './analyzerFileInfo';
 import { FlowFlags, FlowNode } from './codeFlow';
-import { Declaration } from './declaration';
-import { ImportResult } from './importResult';
-import { Scope } from './scope';
+import type { Declaration } from './declaration';
+import type { ImportResult } from './importResult';
+import type { Scope } from './scope';
 
 interface AnalyzerNodeInfo {
     //---------------------------------------------------------------

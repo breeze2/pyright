@@ -31,7 +31,7 @@ import {
     Type,
 } from '../analyzer/types';
 import { ModuleNode, ParseNodeType } from '../parser/parseNodes';
-import { TypeEvaluator } from './typeEvaluator';
+import type { TypeEvaluator } from './typeEvaluator';
 import {
     ClassIteratorFlags,
     ClassMemberLookupFlags,

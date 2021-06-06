@@ -6,12 +6,12 @@
  * Implements command that maps to a quick action.
  */
 
-import { CancellationToken, ExecuteCommandParams } from 'vscode-languageserver';
+import type { CancellationToken, ExecuteCommandParams } from 'vscode-languageserver';
 
 import { convertUriToPath } from '../common/pathUtils';
 import { convertTextEdits } from '../common/textEditUtils';
-import { LanguageServerInterface } from '../languageServerBase';
-import { ServerCommand } from './commandController';
+import type { LanguageServerInterface } from '../languageServerBase';
+import type { ServerCommand } from './commandController';
 import { Commands } from './commands';
 
 export class QuickActionCommand implements ServerCommand {

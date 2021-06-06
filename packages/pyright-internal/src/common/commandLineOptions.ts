@@ -9,7 +9,7 @@
  * of the analyzer).
  */
 
-import { PythonVersion } from './pythonVersion';
+import type { PythonVersion } from './pythonVersion';
 
 export const enum DiagnosticSeverityOverrides {
     Error = 'error',

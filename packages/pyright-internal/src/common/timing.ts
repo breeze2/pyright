@@ -8,7 +8,7 @@
  * durations at the millisecond level of resolution.
  */
 
-import { ConsoleInterface } from './console';
+import type { ConsoleInterface } from './console';
 
 export class Duration {
     private _startTime: number;

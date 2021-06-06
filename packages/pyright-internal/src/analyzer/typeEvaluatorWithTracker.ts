@@ -11,10 +11,10 @@
  */
 
 import { isDebugMode } from '../common/core';
-import { LogTracker } from '../common/logTracker';
+import type { LogTracker } from '../common/logTracker';
 import { timingStats } from '../common/timing';
-import { ImportLookup } from './analyzerFileInfo';
-import { PrintableType, TracePrinter } from './tracePrinter';
+import type { ImportLookup } from './analyzerFileInfo';
+import type { PrintableType, TracePrinter } from './tracePrinter';
 import { createTypeEvaluator, EvaluatorOptions, TypeEvaluator } from './typeEvaluator';
 
 // We don't want to track calls from the type evaluator itself, but only entry points.

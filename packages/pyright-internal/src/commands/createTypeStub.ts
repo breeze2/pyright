@@ -6,15 +6,15 @@
  * Implements 'create stub' command functionality.
  */
 
-import { CancellationToken, ExecuteCommandParams } from 'vscode-languageserver';
+import type { CancellationToken, ExecuteCommandParams } from 'vscode-languageserver';
 
 import { AnalyzerService } from '../analyzer/service';
 import { OperationCanceledException } from '../common/cancellationUtils';
 import { createDeferred } from '../common/deferred';
 import { convertPathToUri } from '../common/pathUtils';
-import { LanguageServerInterface, WorkspaceServiceInstance } from '../languageServerBase';
+import type { LanguageServerInterface, WorkspaceServiceInstance } from '../languageServerBase';
 import { AnalyzerServiceExecutor } from '../languageService/analyzerServiceExecutor';
-import { ServerCommand } from './commandController';
+import type { ServerCommand } from './commandController';
 
 export class CreateTypeStubCommand implements ServerCommand {
     constructor(private _ls: LanguageServerInterface) {}

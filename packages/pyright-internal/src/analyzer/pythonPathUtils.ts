@@ -9,9 +9,9 @@
 
 import * as child_process from 'child_process';
 
-import { ConfigOptions } from '../common/configOptions';
+import type { ConfigOptions } from '../common/configOptions';
 import { compareComparableValues } from '../common/core';
-import { FileSystem } from '../common/fileSystem';
+import type { FileSystem } from '../common/fileSystem';
 import * as pathConsts from '../common/pathConsts';
 import {
     combinePaths,

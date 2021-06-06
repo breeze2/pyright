@@ -6,11 +6,11 @@
  * Convert Pyright's FileEditActions to LanguageServer's WorkspaceEdits.
  */
 
-import { WorkspaceEdit } from 'vscode-languageserver';
+import type { WorkspaceEdit } from 'vscode-languageserver';
 
-import { FileEditAction } from '../common/editAction';
+import type { FileEditAction } from '../common/editAction';
 import { convertPathToUri } from '../common/pathUtils';
-import { FileSystem } from './fileSystem';
+import type { FileSystem } from './fileSystem';
 
 export function convertWorkspaceEdits(fs: FileSystem, edits: FileEditAction[]) {
     const workspaceEdits: WorkspaceEdit = {

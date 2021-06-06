@@ -12,8 +12,8 @@
 import * as fs from 'fs';
 
 import { getPyTypedInfo } from './analyzer/pyTypedUtils';
-import { ExecutionEnvironment } from './common/configOptions';
-import {
+import type { ExecutionEnvironment } from './common/configOptions';
+import type {
     FileSystem,
     FileWatcher,
     FileWatcherEventHandler,

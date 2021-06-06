@@ -10,7 +10,7 @@
 
 import { Declaration, DeclarationType } from '../analyzer/declaration';
 import * as ParseTreeUtils from '../analyzer/parseTreeUtils';
-import { SourceMapper } from '../analyzer/sourceMapper';
+import type { SourceMapper } from '../analyzer/sourceMapper';
 import {
     getClassDocString,
     getFunctionDocStringInherited,
@@ -19,7 +19,7 @@ import {
     getPropertyDocStringInherited,
     getVariableInStubFileDocStrings,
 } from '../analyzer/typeDocStringUtils';
-import { TypeEvaluator } from '../analyzer/typeEvaluator';
+import type { TypeEvaluator } from '../analyzer/typeEvaluator';
 import {
     FunctionType,
     isClass,

@@ -6,10 +6,10 @@
  * Implements 'restart server' command functionality.
  */
 
-import { ExecuteCommandParams } from 'vscode-languageserver';
+import type { ExecuteCommandParams } from 'vscode-languageserver';
 
-import { LanguageServerInterface } from '../languageServerBase';
-import { ServerCommand } from './commandController';
+import type { LanguageServerInterface } from '../languageServerBase';
+import type { ServerCommand } from './commandController';
 
 export class RestartServerCommand implements ServerCommand {
     constructor(private _ls: LanguageServerInterface) {}

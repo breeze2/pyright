@@ -12,19 +12,19 @@ import {
     Command,
     ExecuteCommandParams,
     WorkDoneProgressServerReporter,
-} from 'vscode-languageserver/node';
+} from 'vscode-languageserver';
 import { isMainThread } from 'worker_threads';
 
-import { AnalysisResults } from './analyzer/analysis';
+import type { AnalysisResults } from './analyzer/analysis';
 import { isPythonBinary } from './analyzer/pythonPathUtils';
 import { BackgroundAnalysis, BackgroundAnalysisRunner } from './backgroundAnalysis';
-import { BackgroundAnalysisBase } from './backgroundAnalysisBase';
+import type { BackgroundAnalysisBase } from './backgroundAnalysisBase';
 import { CommandController } from './commands/commandController';
 import { getCancellationFolderName } from './common/cancellationUtils';
 import { LogLevel } from './common/console';
 import { isDebugMode, isString } from './common/core';
 import { convertUriToPath, resolvePaths } from './common/pathUtils';
-import { ProgressReporter } from './common/progressReporter';
+import type { ProgressReporter } from './common/progressReporter';
 import { LanguageServerBase, ServerSettings, WorkspaceServiceInstance } from './languageServerBase';
 import { CodeActionProvider } from './languageService/codeActionProvider';
 

@@ -11,7 +11,7 @@
  * parse tree from scratch.
  */
 
-import { ModuleNode, ParseNode } from '../parser/parseNodes';
+import type { ModuleNode, ParseNode } from '../parser/parseNodes';
 import * as AnalyzerNodeInfo from './analyzerNodeInfo';
 import { ParseTreeWalker } from './parseTreeWalker';
 

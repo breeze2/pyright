@@ -18,8 +18,8 @@ import { Diagnostic, DiagnosticAddendum } from '../common/diagnostic';
 import { DiagnosticSink } from '../common/diagnosticSink';
 import { convertOffsetsToRange, convertPositionToOffset } from '../common/positionUtils';
 import { latestStablePythonVersion, PythonVersion } from '../common/pythonVersion';
-import { TextRange } from '../common/textRange';
-import { TextRangeCollection } from '../common/textRangeCollection';
+import type { TextRange } from '../common/textRange';
+import type { TextRangeCollection } from '../common/textRangeCollection';
 import { timingStats } from '../common/timing';
 import { Localizer } from '../localization/localize';
 import {

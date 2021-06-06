@@ -15,14 +15,14 @@ import { timingStats } from './common/timing';
 
 import chalk from 'chalk';
 import commandLineArgs from 'command-line-args';
-import { CommandLineOptions, OptionDefinition } from 'command-line-args';
+import type { CommandLineOptions, OptionDefinition } from 'command-line-args';
 
 import { PackageTypeVerifier } from './analyzer/packageTypeVerifier';
 import { AnalyzerService } from './analyzer/service';
 import { CommandLineOptions as PyrightCommandLineOptions } from './common/commandLineOptions';
 import { StderrConsole } from './common/console';
 import { Diagnostic, DiagnosticCategory } from './common/diagnostic';
-import { FileDiagnostics } from './common/diagnosticSink';
+import type { FileDiagnostics } from './common/diagnosticSink';
 import { combinePaths, normalizePath } from './common/pathUtils';
 import { createFromRealFileSystem } from './common/fileSystem';
 import { isEmptyRange, Range } from './common/textRange';

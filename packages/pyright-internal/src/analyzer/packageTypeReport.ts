@@ -9,7 +9,7 @@
  * they have known types.
  */
 
-import { Diagnostic, DiagnosticWithinFile } from '../common/diagnostic';
+import type { Diagnostic, DiagnosticWithinFile } from '../common/diagnostic';
 
 export enum SymbolCategory {
     Indeterminate,

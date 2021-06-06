@@ -10,14 +10,14 @@
 
 import * as TOML from '@iarna/toml';
 import * as JSONC from 'jsonc-parser';
-import {
+import type {
     AbstractCancellationTokenSource,
     CancellationToken,
     CompletionItem,
     DocumentSymbol,
 } from 'vscode-languageserver';
-import { TextDocumentContentChangeEvent } from 'vscode-languageserver-textdocument';
-import {
+import type { TextDocumentContentChangeEvent } from 'vscode-languageserver-textdocument';
+import type {
     CallHierarchyIncomingCall,
     CallHierarchyItem,
     CallHierarchyOutgoingCall,
@@ -25,14 +25,14 @@ import {
     MarkupKind,
 } from 'vscode-languageserver-types';
 
-import { BackgroundAnalysisBase } from '../backgroundAnalysisBase';
+import type { BackgroundAnalysisBase } from '../backgroundAnalysisBase';
 import { createBackgroundThreadCancellationTokenSource } from '../common/cancellationUtils';
-import { CommandLineOptions } from '../common/commandLineOptions';
+import type { CommandLineOptions } from '../common/commandLineOptions';
 import { ConfigOptions } from '../common/configOptions';
 import { ConsoleInterface, log, LogLevel, StandardConsole } from '../common/console';
-import { Diagnostic } from '../common/diagnostic';
-import { FileEditAction, TextEditAction } from '../common/editAction';
-import { LanguageServiceExtension } from '../common/extensibility';
+import type { Diagnostic } from '../common/diagnostic';
+import type { FileEditAction, TextEditAction } from '../common/editAction';
+import type { LanguageServiceExtension } from '../common/extensibility';
 import { FileSystem, FileWatcher, ignoredWatchEventFunction } from '../common/fileSystem';
 import {
     combinePaths,
@@ -49,20 +49,20 @@ import {
     tryRealpath,
     tryStat,
 } from '../common/pathUtils';
-import { DocumentRange, Position, Range } from '../common/textRange';
+import type { DocumentRange, Position, Range } from '../common/textRange';
 import { timingStats } from '../common/timing';
-import { AbbreviationMap, CompletionOptions, CompletionResults } from '../languageService/completionProvider';
-import { DefinitionFilter } from '../languageService/definitionProvider';
-import { IndexResults, WorkspaceSymbolCallback } from '../languageService/documentSymbolProvider';
-import { HoverResults } from '../languageService/hoverProvider';
-import { ReferenceCallback } from '../languageService/referencesProvider';
-import { SignatureHelpResults } from '../languageService/signatureHelpProvider';
-import { AnalysisCompleteCallback } from './analysis';
+import type { AbbreviationMap, CompletionOptions, CompletionResults } from '../languageService/completionProvider';
+import type { DefinitionFilter } from '../languageService/definitionProvider';
+import type { IndexResults, WorkspaceSymbolCallback } from '../languageService/documentSymbolProvider';
+import type { HoverResults } from '../languageService/hoverProvider';
+import type { ReferenceCallback } from '../languageService/referencesProvider';
+import type { SignatureHelpResults } from '../languageService/signatureHelpProvider';
+import type { AnalysisCompleteCallback } from './analysis';
 import { BackgroundAnalysisProgram, BackgroundAnalysisProgramFactory } from './backgroundAnalysisProgram';
 import { ImportedModuleDescriptor, ImportResolver, ImportResolverFactory } from './importResolver';
-import { MaxAnalysisTime } from './program';
+import type { MaxAnalysisTime } from './program';
 import { findPythonSearchPaths } from './pythonPathUtils';
-import { TypeEvaluator } from './typeEvaluator';
+import type { TypeEvaluator } from './typeEvaluator';
 
 export const configFileNames = ['pyrightconfig.json', 'mspythonconfig.json'];
 export const pyprojectTomlName = 'pyproject.toml';

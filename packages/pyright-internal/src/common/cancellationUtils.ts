@@ -9,13 +9,14 @@
 import * as fs from 'fs';
 import * as os from 'os';
 import * as path from 'path';
-import { CancellationId, CancellationTokenSource } from 'vscode-jsonrpc';
 import {
     AbstractCancellationTokenSource,
+    CancellationId,
     CancellationReceiverStrategy,
     CancellationSenderStrategy,
     CancellationStrategy,
     CancellationToken,
+    CancellationTokenSource,
     Disposable,
     Emitter,
     Event,

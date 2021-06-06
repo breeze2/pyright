@@ -13,7 +13,7 @@
  */
 
 import { Commands } from '../commands/commands';
-import { DiagnosticLevel } from '../common/configOptions';
+import type { DiagnosticLevel } from '../common/configOptions';
 import { assert } from '../common/debug';
 import { Diagnostic, DiagnosticAddendum } from '../common/diagnostic';
 import { DiagnosticRule } from '../common/diagnosticRules';
@@ -72,7 +72,7 @@ import {
 } from '../parser/parseNodes';
 import { getUnescapedString, UnescapeError, UnescapeErrorType } from '../parser/stringTokenUtils';
 import { OperatorType } from '../parser/tokenizerTypes';
-import { AnalyzerFileInfo } from './analyzerFileInfo';
+import type { AnalyzerFileInfo } from './analyzerFileInfo';
 import * as AnalyzerNodeInfo from './analyzerNodeInfo';
 import { Declaration, DeclarationType } from './declaration';
 import { isExplicitTypeAliasDeclaration, isFinalVariableDeclaration } from './declarationUtils';
@@ -83,10 +83,10 @@ import { ParseTreeWalker } from './parseTreeWalker';
 import { ScopeType } from './scope';
 import { getScopeForNode } from './scopeUtils';
 import { evaluateStaticBoolExpression } from './staticExpressions';
-import { Symbol } from './symbol';
+import type { Symbol } from './symbol';
 import * as SymbolNameUtils from './symbolNameUtils';
 import { getLastTypedDeclaredForSymbol, isFinalVariable } from './symbolUtils';
-import { TypeEvaluator } from './typeEvaluator';
+import type { TypeEvaluator } from './typeEvaluator';
 import {
     AnyType,
     ClassType,

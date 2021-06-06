@@ -8,12 +8,12 @@
  * by the binder and checker.
  */
 
-import { DiagnosticRuleSet, ExecutionEnvironment } from '../common/configOptions';
-import { TextRangeDiagnosticSink } from '../common/diagnosticSink';
-import { TextRange } from '../common/textRange';
-import { TextRangeCollection } from '../common/textRangeCollection';
-import { Scope } from './scope';
-import { SymbolTable } from './symbol';
+import type { DiagnosticRuleSet, ExecutionEnvironment } from '../common/configOptions';
+import type { TextRangeDiagnosticSink } from '../common/diagnosticSink';
+import type { TextRange } from '../common/textRange';
+import type { TextRangeCollection } from '../common/textRangeCollection';
+import type { Scope } from './scope';
+import type { SymbolTable } from './symbol';
 
 // Maps import paths to the symbol table for the imported module.
 export type ImportLookup = (filePath: string) => ImportLookupResult | undefined;

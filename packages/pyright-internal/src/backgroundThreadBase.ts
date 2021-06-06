@@ -13,7 +13,7 @@ import { ConfigOptions } from './common/configOptions';
 import { LogLevel } from './common/console';
 import * as debug from './common/debug';
 import { createFromRealFileSystem, FileSystem } from './common/fileSystem';
-import { FileSpec } from './common/pathUtils';
+import type { FileSpec } from './common/pathUtils';
 import { PyrightFileSystem } from './pyrightFileSystem';
 
 export class BackgroundThreadBase {

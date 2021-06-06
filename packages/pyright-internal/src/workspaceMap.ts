@@ -5,7 +5,7 @@
  */
 
 import { createDeferred } from './common/deferred';
-import { LanguageServerBase, WorkspaceServiceInstance } from './languageServerBase';
+import type { LanguageServerBase, WorkspaceServiceInstance } from './languageServerBase';
 
 export class WorkspaceMap extends Map<string, WorkspaceServiceInstance> {
     private _defaultWorkspacePath = '<default>';

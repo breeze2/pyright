@@ -19,18 +19,18 @@ import {
 import { URI } from 'vscode-uri';
 
 import { resolveAliasDeclaration } from '../analyzer/aliasDeclarationUtils';
-import { AnalyzerFileInfo, ImportLookup } from '../analyzer/analyzerFileInfo';
+import type { AnalyzerFileInfo, ImportLookup } from '../analyzer/analyzerFileInfo';
 import * as AnalyzerNodeInfo from '../analyzer/analyzerNodeInfo';
 import { AliasDeclaration, Declaration, DeclarationType } from '../analyzer/declaration';
 import { getNameFromDeclaration } from '../analyzer/declarationUtils';
 import { getLastTypedDeclaredForSymbol } from '../analyzer/symbolUtils';
-import { TypeEvaluator } from '../analyzer/typeEvaluator';
+import type { TypeEvaluator } from '../analyzer/typeEvaluator';
 import { isProperty } from '../analyzer/typeUtils';
 import { throwIfCancellationRequested } from '../common/cancellationUtils';
 import { convertOffsetsToRange } from '../common/positionUtils';
 import * as StringUtils from '../common/stringUtils';
-import { Range } from '../common/textRange';
-import { ParseResults } from '../parser/parser';
+import type { Range } from '../common/textRange';
+import type { ParseResults } from '../parser/parser';
 import { convertSymbolKindToCompletionItemKind } from './autoImporter';
 
 export interface IndexAliasData {

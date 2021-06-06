@@ -8,7 +8,7 @@
  */
 
 import { randomBytes } from 'crypto';
-import { Dirent } from 'fs';
+import type { Dirent } from 'fs';
 import * as path from 'path';
 import Char from 'typescript-char';
 import { URI } from 'vscode-uri';
@@ -17,7 +17,7 @@ import { PyrightFileSystem } from '../pyrightFileSystem';
 import { some } from './collectionUtils';
 import { compareValues, Comparison, GetCanonicalFileName, identity } from './core';
 import * as debug from './debug';
-import { FileSystem, Stats } from './fileSystem';
+import type { FileSystem, Stats } from './fileSystem';
 import {
     compareStringsCaseInsensitive,
     compareStringsCaseSensitive,

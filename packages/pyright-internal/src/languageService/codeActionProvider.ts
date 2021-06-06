@@ -10,9 +10,9 @@ import { CancellationToken, CodeAction, CodeActionKind, Command } from 'vscode-l
 
 import { Commands } from '../commands/commands';
 import { throwIfCancellationRequested } from '../common/cancellationUtils';
-import { AddMissingOptionalToParamAction, CreateTypeStubFileAction } from '../common/diagnostic';
-import { Range } from '../common/textRange';
-import { WorkspaceServiceInstance } from '../languageServerBase';
+import type { AddMissingOptionalToParamAction, CreateTypeStubFileAction } from '../common/diagnostic';
+import type { Range } from '../common/textRange';
+import type { WorkspaceServiceInstance } from '../languageServerBase';
 import { Localizer } from '../localization/localize';
 
 export class CodeActionProvider {

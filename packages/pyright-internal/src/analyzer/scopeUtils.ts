@@ -8,7 +8,7 @@
  * symbol tables.
  */
 
-import { ParseNode } from '../parser/parseNodes';
+import type { ParseNode } from '../parser/parseNodes';
 import { getScope } from './analyzerNodeInfo';
 import { getEvaluationScopeNode } from './parseTreeUtils';
 import { Scope, ScopeType } from './scope';

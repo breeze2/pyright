@@ -7,7 +7,7 @@
  * Represents a single edit within a file.
  */
 
-import { Range } from './textRange';
+import type { Range } from './textRange';
 
 export interface TextEditAction {
     range: Range;

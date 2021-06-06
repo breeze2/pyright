@@ -10,7 +10,7 @@ import { Worker } from 'worker_threads';
 
 import { BackgroundAnalysisBase, BackgroundAnalysisRunnerBase, InitializationData } from './backgroundAnalysisBase';
 import { getCancellationFolderName } from './common/cancellationUtils';
-import { ConsoleInterface } from './common/console';
+import type { ConsoleInterface } from './common/console';
 
 export class BackgroundAnalysis extends BackgroundAnalysisBase {
     constructor(console: ConsoleInterface) {

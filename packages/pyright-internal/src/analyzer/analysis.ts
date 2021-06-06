@@ -6,15 +6,15 @@
  * Various analysis helper types and functions
  */
 
-import { CancellationToken } from 'vscode-languageserver';
+import type { CancellationToken } from 'vscode-languageserver';
 
 import { OperationCanceledException, throwIfCancellationRequested } from '../common/cancellationUtils';
-import { ConfigOptions } from '../common/configOptions';
-import { ConsoleInterface } from '../common/console';
+import type { ConfigOptions } from '../common/configOptions';
+import type { ConsoleInterface } from '../common/console';
 import * as debug from '../common/debug';
-import { FileDiagnostics } from '../common/diagnosticSink';
+import type { FileDiagnostics } from '../common/diagnosticSink';
 import { Duration } from '../common/timing';
-import { MaxAnalysisTime, Program } from './program';
+import type { MaxAnalysisTime, Program } from './program';
 
 export const nullCallback: AnalysisCompleteCallback = (_) => {
     /* empty */

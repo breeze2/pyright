@@ -7,7 +7,7 @@
  * Parser for py.typed files.
  */
 
-import { FileSystem } from '../common/fileSystem';
+import type { FileSystem } from '../common/fileSystem';
 import { combinePaths, isDirectory, isFile } from '../common/pathUtils';
 
 export interface PyTypedInfo {

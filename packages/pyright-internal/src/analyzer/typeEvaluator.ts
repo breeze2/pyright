@@ -14,15 +14,15 @@
  * taken by the TypeScript compiler.
  */
 
-import { CancellationToken } from 'vscode-languageserver';
+import type { CancellationToken } from 'vscode-languageserver';
 
 import { Commands } from '../commands/commands';
 import { throwIfCancellationRequested } from '../common/cancellationUtils';
-import { DiagnosticLevel } from '../common/configOptions';
+import type { DiagnosticLevel } from '../common/configOptions';
 import { assert, fail } from '../common/debug';
 import { AddMissingOptionalToParamAction, Diagnostic, DiagnosticAddendum } from '../common/diagnostic';
 import { DiagnosticRule } from '../common/diagnosticRules';
-import { LogTracker } from '../common/logTracker';
+import type { LogTracker } from '../common/logTracker';
 import { convertOffsetsToRange } from '../common/positionUtils';
 import { PythonVersion } from '../common/pythonVersion';
 import { getEmptyRange, TextRange } from '../common/textRange';
@@ -81,7 +81,7 @@ import {
 import { ParseOptions, Parser } from '../parser/parser';
 import { KeywordType, OperatorType, StringTokenFlags } from '../parser/tokenizerTypes';
 import * as DeclarationUtils from './aliasDeclarationUtils';
-import { AnalyzerFileInfo, ImportLookup } from './analyzerFileInfo';
+import type { AnalyzerFileInfo, ImportLookup } from './analyzerFileInfo';
 import * as AnalyzerNodeInfo from './analyzerNodeInfo';
 import {
     CodeFlowReferenceExpressionNode,
@@ -124,7 +124,7 @@ import {
     isNotRequiredTypedDictVariable,
     isRequiredTypedDictVariable,
 } from './symbolUtils';
-import { PrintableType, TracePrinter } from './tracePrinter';
+import type { PrintableType, TracePrinter } from './tracePrinter';
 import {
     CachedType,
     IncompleteType,

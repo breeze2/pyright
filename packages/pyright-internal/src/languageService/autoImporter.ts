@@ -8,7 +8,7 @@
 import { CancellationToken, CompletionItemKind, SymbolKind } from 'vscode-languageserver';
 
 import { DeclarationType } from '../analyzer/declaration';
-import { ImportResolver, ModuleNameAndType } from '../analyzer/importResolver';
+import type { ImportResolver, ModuleNameAndType } from '../analyzer/importResolver';
 import { ImportType } from '../analyzer/importResult';
 import {
     getImportGroup,
@@ -18,19 +18,19 @@ import {
     ImportGroup,
     ImportStatements,
 } from '../analyzer/importStatementUtils';
-import { SourceFileInfo } from '../analyzer/program';
-import { Symbol } from '../analyzer/symbol';
+import type { SourceFileInfo } from '../analyzer/program';
+import type { Symbol } from '../analyzer/symbol';
 import * as SymbolNameUtils from '../analyzer/symbolNameUtils';
 import { throwIfCancellationRequested } from '../common/cancellationUtils';
-import { ExecutionEnvironment } from '../common/configOptions';
-import { TextEditAction } from '../common/editAction';
+import type { ExecutionEnvironment } from '../common/configOptions';
+import type { TextEditAction } from '../common/editAction';
 import { combinePaths, getDirectoryPath, getFileName, stripFileExtension } from '../common/pathUtils';
 import * as StringUtils from '../common/stringUtils';
-import { Position } from '../common/textRange';
+import type { Position } from '../common/textRange';
 import { Duration } from '../common/timing';
 import { ParseNodeType } from '../parser/parseNodes';
-import { ParseResults } from '../parser/parser';
-import { IndexAliasData, IndexResults } from './documentSymbolProvider';
+import type { ParseResults } from '../parser/parser';
+import type { IndexAliasData, IndexResults } from './documentSymbolProvider';
 
 export interface AutoImportSymbol {
     readonly importAlias?: IndexAliasData;

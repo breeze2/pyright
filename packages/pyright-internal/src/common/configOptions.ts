@@ -11,10 +11,10 @@ import * as child_process from 'child_process';
 import { isAbsolute } from 'path';
 
 import * as pathConsts from '../common/pathConsts';
-import { DiagnosticSeverityOverridesMap } from './commandLineOptions';
-import { ConsoleInterface } from './console';
+import type { DiagnosticSeverityOverridesMap } from './commandLineOptions';
+import type { ConsoleInterface } from './console';
 import { DiagnosticRule } from './diagnosticRules';
-import { FileSystem } from './fileSystem';
+import type { FileSystem } from './fileSystem';
 import {
     combinePaths,
     ensureTrailingDirectorySeparator,

@@ -7,7 +7,7 @@
  * Provides support for miscellaneous quick actions.
  */
 
-import { CancellationToken } from 'vscode-languageserver';
+import type { CancellationToken } from 'vscode-languageserver';
 
 import {
     getTextEditsForAutoImportInsertion,
@@ -18,11 +18,11 @@ import {
 import * as ParseTreeUtils from '../analyzer/parseTreeUtils';
 import { Commands } from '../commands/commands';
 import { throwIfCancellationRequested } from '../common/cancellationUtils';
-import { TextEditAction } from '../common/editAction';
+import type { TextEditAction } from '../common/editAction';
 import { convertOffsetToPosition } from '../common/positionUtils';
 import { TextRange } from '../common/textRange';
 import { ParseNode, ParseNodeType } from '../parser/parseNodes';
-import { ParseResults } from '../parser/parser';
+import type { ParseResults } from '../parser/parser';
 import { ImportSorter } from './importSorter';
 
 export function performQuickAction(command: string, args: any[], parseResults: ParseResults, token: CancellationToken) {

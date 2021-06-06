@@ -8,7 +8,7 @@
  * python source file.
  */
 
-import { CancellationToken } from 'vscode-languageserver';
+import type { CancellationToken } from 'vscode-languageserver';
 
 import {
     compareImportStatements,
@@ -17,12 +17,11 @@ import {
     ImportStatement,
 } from '../analyzer/importStatementUtils';
 import { throwIfCancellationRequested } from '../common/cancellationUtils';
-import { TextEditAction } from '../common/editAction';
+import type { TextEditAction } from '../common/editAction';
 import { convertOffsetToPosition } from '../common/positionUtils';
-import { Range } from '../common/textRange';
-import { TextRange } from '../common/textRange';
+import { Range, TextRange } from '../common/textRange';
 import { ImportAsNode, ImportFromAsNode, ImportFromNode, ParseNodeType } from '../parser/parseNodes';
-import { ParseResults } from '../parser/parser';
+import type { ParseResults } from '../parser/parser';
 
 // We choose a line length that matches the default for the popular
 // "black" formatter used in many Python projects.

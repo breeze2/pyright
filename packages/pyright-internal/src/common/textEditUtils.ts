@@ -6,9 +6,9 @@
  * Language server command execution functionality.
  */
 
-import { TextEdit, WorkspaceEdit } from 'vscode-languageserver';
+import type { TextEdit, WorkspaceEdit } from 'vscode-languageserver';
 
-import { TextEditAction } from '../common/editAction';
+import type { TextEditAction } from '../common/editAction';
 
 export function convertTextEdits(uri: string, editActions: TextEditAction[] | undefined): WorkspaceEdit {
     if (!editActions) {

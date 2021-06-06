@@ -9,8 +9,8 @@
 
 import { assert } from '../common/debug';
 import { ExpressionNode, ParameterCategory } from '../parser/parseNodes';
-import { FunctionDeclaration } from './declaration';
-import { Symbol, SymbolTable } from './symbol';
+import type { FunctionDeclaration } from './declaration';
+import type { Symbol, SymbolTable } from './symbol';
 
 export const enum TypeCategory {
     // Name is not bound to a value of any type.

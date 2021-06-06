@@ -6,9 +6,9 @@
  * Helper functions around alias declarations.
  */
 
-import { ImportLookup, ImportLookupResult } from './analyzerFileInfo';
+import type { ImportLookup, ImportLookupResult } from './analyzerFileInfo';
 import { Declaration, DeclarationType } from './declaration';
-import { Symbol } from './symbol';
+import type { Symbol } from './symbol';
 
 // If the specified declaration is an alias declaration that points to a symbol,
 // it resolves the alias and looks up the symbol, then returns the first declaration

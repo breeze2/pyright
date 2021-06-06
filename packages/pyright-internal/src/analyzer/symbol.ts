@@ -11,7 +11,7 @@
 
 import { Declaration, DeclarationType } from './declaration';
 import { areDeclarationsSame, hasTypeForDeclaration } from './declarationUtils';
-import { Type } from './types';
+import type { Type } from './types';
 
 export const enum SymbolFlags {
     None = 0,

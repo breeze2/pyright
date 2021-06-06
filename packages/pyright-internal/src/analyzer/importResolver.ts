@@ -8,11 +8,11 @@
  * runtime rules of Python.
  */
 
-import { Dirent } from 'fs';
+import type { Dirent } from 'fs';
 
 import { getOrAdd } from '../common/collectionUtils';
-import { ConfigOptions, ExecutionEnvironment } from '../common/configOptions';
-import { FileSystem } from '../common/fileSystem';
+import type { ConfigOptions, ExecutionEnvironment } from '../common/configOptions';
+import type { FileSystem } from '../common/fileSystem';
 import { stubsSuffix } from '../common/pathConsts';
 import {
     changeAnyExtension,

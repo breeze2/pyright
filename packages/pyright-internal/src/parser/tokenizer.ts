@@ -12,7 +12,7 @@
 
 import Char from 'typescript-char';
 
-import { TextRange } from '../common/textRange';
+import type { TextRange } from '../common/textRange';
 import { TextRangeCollection } from '../common/textRangeCollection';
 import {
     isBinary,

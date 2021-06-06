@@ -17,14 +17,14 @@
  */
 
 import { Commands } from '../commands/commands';
-import { DiagnosticLevel } from '../common/configOptions';
+import type { DiagnosticLevel } from '../common/configOptions';
 import { assert, assertNever, fail } from '../common/debug';
-import { CreateTypeStubFileAction, Diagnostic } from '../common/diagnostic';
+import type { CreateTypeStubFileAction, Diagnostic } from '../common/diagnostic';
 import { DiagnosticRule } from '../common/diagnosticRules';
 import { getFileName, stripFileExtension } from '../common/pathUtils';
 import { convertOffsetsToRange } from '../common/positionUtils';
-import { getEmptyRange } from '../common/textRange';
 import { TextRange } from '../common/textRange';
+import { getEmptyRange } from '../common/textRange';
 import { Localizer } from '../localization/localize';
 import {
     ArgumentCategory,
@@ -76,7 +76,7 @@ import {
     YieldNode,
 } from '../parser/parseNodes';
 import { KeywordType, OperatorType } from '../parser/tokenizerTypes';
-import { AnalyzerFileInfo, ImportLookupResult } from './analyzerFileInfo';
+import type { AnalyzerFileInfo, ImportLookupResult } from './analyzerFileInfo';
 import * as AnalyzerNodeInfo from './analyzerNodeInfo';
 import {
     CodeFlowReferenceExpressionNode,

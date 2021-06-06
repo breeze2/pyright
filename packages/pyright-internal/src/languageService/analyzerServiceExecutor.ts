@@ -10,7 +10,7 @@
 import { isPythonBinary } from '../analyzer/pythonPathUtils';
 import { CommandLineOptions } from '../common/commandLineOptions';
 import { combinePaths } from '../common/pathUtils';
-import { ServerSettings, WorkspaceServiceInstance } from '../languageServerBase';
+import type { ServerSettings, WorkspaceServiceInstance } from '../languageServerBase';
 
 export class AnalyzerServiceExecutor {
     static runWithOptions(

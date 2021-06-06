@@ -11,16 +11,16 @@
 import { CancellationToken, DocumentHighlight, DocumentHighlightKind } from 'vscode-languageserver';
 
 import { isCodeUnreachable } from '../analyzer/analyzerNodeInfo';
-import { Declaration } from '../analyzer/declaration';
+import type { Declaration } from '../analyzer/declaration';
 import { areDeclarationsSame } from '../analyzer/declarationUtils';
 import * as ParseTreeUtils from '../analyzer/parseTreeUtils';
 import { ParseTreeWalker } from '../analyzer/parseTreeWalker';
-import { TypeEvaluator } from '../analyzer/typeEvaluator';
+import type { TypeEvaluator } from '../analyzer/typeEvaluator';
 import { throwIfCancellationRequested } from '../common/cancellationUtils';
 import { convertOffsetToPosition, convertPositionToOffset } from '../common/positionUtils';
 import { Position, TextRange } from '../common/textRange';
 import { ModuleNameNode, NameNode, ParseNode, ParseNodeType } from '../parser/parseNodes';
-import { ParseResults } from '../parser/parser';
+import type { ParseResults } from '../parser/parser';
 
 // This walker looks for symbols that are semantically equivalent
 // to the requested symbol.

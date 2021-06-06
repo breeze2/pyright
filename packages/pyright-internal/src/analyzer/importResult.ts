@@ -7,7 +7,7 @@
  * Interface that describes the output of the import resolver.
  */
 
-import { PyTypedInfo } from './pyTypedUtils';
+import type { PyTypedInfo } from './pyTypedUtils';
 
 export const enum ImportType {
     BuiltIn,

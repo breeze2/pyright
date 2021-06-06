@@ -9,7 +9,7 @@
  */
 
 import { CancellationToken, SymbolKind } from 'vscode-languageserver';
-import {
+import type {
     CallHierarchyIncomingCall,
     CallHierarchyItem,
     CallHierarchyOutgoingCall,
@@ -20,7 +20,7 @@ import { Declaration, DeclarationType } from '../analyzer/declaration';
 import * as DeclarationUtils from '../analyzer/declarationUtils';
 import * as ParseTreeUtils from '../analyzer/parseTreeUtils';
 import { ParseTreeWalker } from '../analyzer/parseTreeWalker';
-import { TypeEvaluator } from '../analyzer/typeEvaluator';
+import type { TypeEvaluator } from '../analyzer/typeEvaluator';
 import { ClassType, isClass, isFunction, isObject } from '../analyzer/types';
 import {
     ClassMemberLookupFlags,
@@ -34,7 +34,7 @@ import { getFileName } from '../common/pathUtils';
 import { convertOffsetsToRange } from '../common/positionUtils';
 import { rangesAreEqual } from '../common/textRange';
 import { CallNode, MemberAccessNode, NameNode, ParseNode, ParseNodeType } from '../parser/parseNodes';
-import { ParseResults } from '../parser/parser';
+import type { ParseResults } from '../parser/parser';
 
 export class CallHierarchyProvider {
     static getCallForDeclaration(

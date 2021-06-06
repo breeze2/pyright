@@ -19,7 +19,7 @@ import {
     TextEdit,
 } from 'vscode-languageserver';
 
-import { ImportLookup } from '../analyzer/analyzerFileInfo';
+import type { ImportLookup } from '../analyzer/analyzerFileInfo';
 import * as AnalyzerNodeInfo from '../analyzer/analyzerNodeInfo';
 import {
     Declaration,
@@ -29,11 +29,11 @@ import {
     isFunctionDeclaration,
 } from '../analyzer/declaration';
 import { convertDocStringToMarkdown, convertDocStringToPlainText } from '../analyzer/docStringConversion';
-import { ImportedModuleDescriptor, ImportResolver } from '../analyzer/importResolver';
+import type { ImportedModuleDescriptor, ImportResolver } from '../analyzer/importResolver';
 import * as ParseTreeUtils from '../analyzer/parseTreeUtils';
 import { getCallNodeAndActiveParameterIndex } from '../analyzer/parseTreeUtils';
 import { isStubFile, SourceMapper } from '../analyzer/sourceMapper';
-import { Symbol, SymbolTable } from '../analyzer/symbol';
+import type { Symbol, SymbolTable } from '../analyzer/symbol';
 import * as SymbolNameUtils from '../analyzer/symbolNameUtils';
 import { getLastTypedDeclaredForSymbol } from '../analyzer/symbolUtils';
 import {
@@ -43,7 +43,7 @@ import {
     getPropertyDocStringInherited,
     getVariableInStubFileDocStrings,
 } from '../analyzer/typeDocStringUtils';
-import { CallSignatureInfo, TypeEvaluator } from '../analyzer/typeEvaluator';
+import type { CallSignatureInfo, TypeEvaluator } from '../analyzer/typeEvaluator';
 import {
     ClassType,
     FunctionType,
@@ -71,15 +71,14 @@ import {
     transformTypeObjectToClass,
 } from '../analyzer/typeUtils';
 import { throwIfCancellationRequested } from '../common/cancellationUtils';
-import { ConfigOptions } from '../common/configOptions';
+import type { ConfigOptions } from '../common/configOptions';
 import * as debug from '../common/debug';
 import { fail } from '../common/debug';
-import { TextEditAction } from '../common/editAction';
+import type { TextEditAction } from '../common/editAction';
 import { convertOffsetToPosition, convertPositionToOffset } from '../common/positionUtils';
 import * as StringUtils from '../common/stringUtils';
-import { comparePositions, Position } from '../common/textRange';
-import { TextRange } from '../common/textRange';
-import { TextRangeCollection } from '../common/textRangeCollection';
+import { comparePositions, Position, TextRange } from '../common/textRange';
+import type { TextRangeCollection } from '../common/textRangeCollection';
 import { Duration } from '../common/timing';
 import {
     DecoratorNode,
@@ -97,10 +96,10 @@ import {
     ParseNodeType,
     StringNode,
 } from '../parser/parseNodes';
-import { ParseResults } from '../parser/parser';
-import { Token } from '../parser/tokenizerTypes';
+import type { ParseResults } from '../parser/parser';
+import type { Token } from '../parser/tokenizerTypes';
 import { AbbreviationInfo, AutoImporter, AutoImportResult, ModuleSymbolMap } from './autoImporter';
-import { IndexResults } from './documentSymbolProvider';
+import type { IndexResults } from './documentSymbolProvider';
 import { getAutoImportText, getFunctionDocStringFromType, getOverloadedFunctionTooltip } from './tooltipUtils';
 
 const _keywords: string[] = [

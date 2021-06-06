@@ -8,12 +8,12 @@
  * import statements in a python source file.
  */
 
-import { CancellationToken } from 'vscode-languageserver';
+import type { CancellationToken } from 'vscode-languageserver';
 
 import { throwIfCancellationRequested } from '../common/cancellationUtils';
-import { TextEditAction } from '../common/editAction';
+import type { TextEditAction } from '../common/editAction';
 import { convertOffsetToPosition, convertPositionToOffset } from '../common/positionUtils';
-import { Position } from '../common/textRange';
+import type { Position } from '../common/textRange';
 import { TextRange } from '../common/textRange';
 import {
     ImportAsNode,
@@ -25,7 +25,7 @@ import {
     ParseNode,
     ParseNodeType,
 } from '../parser/parseNodes';
-import { ParseResults } from '../parser/parser';
+import type { ParseResults } from '../parser/parser';
 import * as AnalyzerNodeInfo from './analyzerNodeInfo';
 import { ImportResult, ImportType } from './importResult';
 import * as SymbolNameUtils from './symbolNameUtils';

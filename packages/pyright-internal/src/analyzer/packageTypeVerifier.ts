@@ -11,7 +11,7 @@
 import { ConfigOptions, ExecutionEnvironment } from '../common/configOptions';
 import { assert } from '../common/debug';
 import { Diagnostic, DiagnosticAddendum, DiagnosticCategory } from '../common/diagnostic';
-import { FileSystem } from '../common/fileSystem';
+import type { FileSystem } from '../common/fileSystem';
 import { combinePaths, getDirectoryPath, getFileExtension, stripFileExtension, tryStat } from '../common/pathUtils';
 import { getEmptyRange, Range } from '../common/textRange';
 import { DeclarationType, FunctionDeclaration, VariableDeclaration } from './declaration';
@@ -29,7 +29,7 @@ import { Program } from './program';
 import { getPyTypedInfo } from './pyTypedUtils';
 import { ScopeType } from './scope';
 import { getScopeForNode } from './scopeUtils';
-import { Symbol, SymbolTable } from './symbol';
+import type { Symbol, SymbolTable } from './symbol';
 import { isDunderName, isPrivateOrProtectedName } from './symbolNameUtils';
 import { ClassType, FunctionType, isClass, isModule, isUnknown, ModuleType, Type, TypeCategory } from './types';
 import {

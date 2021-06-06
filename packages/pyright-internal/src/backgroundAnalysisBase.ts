@@ -6,8 +6,8 @@
  * run analyzer from background thread
  */
 
-import { CancellationToken } from 'vscode-languageserver/node';
-import { TextDocumentContentChangeEvent } from 'vscode-languageserver-textdocument';
+import type { CancellationToken } from 'vscode-languageserver';
+import type { TextDocumentContentChangeEvent } from 'vscode-languageserver-textdocument';
 import { MessageChannel, MessagePort, parentPort, threadId, Worker, workerData } from 'worker_threads';
 
 import { AnalysisCompleteCallback, AnalysisResults, analyzeProgram, nullCallback } from './analyzer/analysis';
@@ -30,12 +30,12 @@ import { ConfigOptions } from './common/configOptions';
 import { ConsoleInterface, log, LogLevel } from './common/console';
 import * as debug from './common/debug';
 import { Diagnostic } from './common/diagnostic';
-import { FileDiagnostics } from './common/diagnosticSink';
-import { LanguageServiceExtension } from './common/extensibility';
-import { FileSystem } from './common/fileSystem';
+import type { FileDiagnostics } from './common/diagnosticSink';
+import type { LanguageServiceExtension } from './common/extensibility';
+import type { FileSystem } from './common/fileSystem';
 import { LogTracker } from './common/logTracker';
-import { Range } from './common/textRange';
-import { IndexResults } from './languageService/documentSymbolProvider';
+import type { Range } from './common/textRange';
+import type { IndexResults } from './languageService/documentSymbolProvider';
 
 export class BackgroundAnalysisBase {
     private _worker: Worker | undefined;

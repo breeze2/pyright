@@ -14,8 +14,8 @@ import { CancellationToken, Hover, MarkupKind } from 'vscode-languageserver';
 import { Declaration, DeclarationType } from '../analyzer/declaration';
 import { convertDocStringToMarkdown, convertDocStringToPlainText } from '../analyzer/docStringConversion';
 import * as ParseTreeUtils from '../analyzer/parseTreeUtils';
-import { SourceMapper } from '../analyzer/sourceMapper';
-import { TypeEvaluator } from '../analyzer/typeEvaluator';
+import type { SourceMapper } from '../analyzer/sourceMapper';
+import type { TypeEvaluator } from '../analyzer/typeEvaluator';
 import {
     getTypeAliasInfo,
     isClass,
@@ -31,10 +31,10 @@ import { ClassMemberLookupFlags, isProperty, lookUpClassMember } from '../analyz
 import { throwIfCancellationRequested } from '../common/cancellationUtils';
 import { fail } from '../common/debug';
 import { convertOffsetToPosition, convertPositionToOffset } from '../common/positionUtils';
-import { Position, Range } from '../common/textRange';
+import type { Position, Range } from '../common/textRange';
 import { TextRange } from '../common/textRange';
 import { NameNode, ParseNode, ParseNodeType } from '../parser/parseNodes';
-import { ParseResults } from '../parser/parser';
+import type { ParseResults } from '../parser/parser';
 import { getDocumentationPartsForTypeAndDecl, getOverloadedFunctionTooltip } from './tooltipUtils';
 
 export interface HoverTextPart {

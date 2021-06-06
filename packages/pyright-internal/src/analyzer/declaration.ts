@@ -9,8 +9,8 @@
  * is explicitly declared).
  */
 
-import { Range } from '../common/textRange';
-import {
+import type { Range } from '../common/textRange';
+import type {
     ClassNode,
     ExpressionNode,
     FunctionNode,

@@ -8,10 +8,10 @@
  * by a location within a file.
  */
 
-import { CancellationToken } from 'vscode-languageserver';
+import type { CancellationToken } from 'vscode-languageserver';
 
 import * as AnalyzerNodeInfo from '../analyzer/analyzerNodeInfo';
-import { Declaration } from '../analyzer/declaration';
+import type { Declaration } from '../analyzer/declaration';
 import * as DeclarationUtils from '../analyzer/declarationUtils';
 import * as ParseTreeUtils from '../analyzer/parseTreeUtils';
 import { ParseTreeWalker } from '../analyzer/parseTreeWalker';
@@ -19,10 +19,9 @@ import { isStubFile, SourceMapper } from '../analyzer/sourceMapper';
 import { TypeEvaluator } from '../analyzer/typeEvaluator';
 import { throwIfCancellationRequested } from '../common/cancellationUtils';
 import { convertOffsetToPosition, convertPositionToOffset } from '../common/positionUtils';
-import { DocumentRange, Position } from '../common/textRange';
-import { TextRange } from '../common/textRange';
+import { DocumentRange, Position, TextRange } from '../common/textRange';
 import { ModuleNameNode, NameNode, ParseNode, ParseNodeType } from '../parser/parseNodes';
-import { ParseResults } from '../parser/parser';
+import type { ParseResults } from '../parser/parser';
 
 export type ReferenceCallback = (locations: DocumentRange[]) => void;
 

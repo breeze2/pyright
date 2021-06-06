@@ -7,7 +7,7 @@
  * Class that represents a single python source file.
  */
 
-import {
+import type {
     CancellationToken,
     CompletionItem,
     DocumentHighlight,
@@ -24,16 +24,16 @@ import { ConsoleInterface, StandardConsole } from '../common/console';
 import { assert } from '../common/debug';
 import { convertLevelToCategory, Diagnostic, DiagnosticCategory } from '../common/diagnostic';
 import { DiagnosticSink, TextRangeDiagnosticSink } from '../common/diagnosticSink';
-import { TextEditAction } from '../common/editAction';
-import { FileSystem } from '../common/fileSystem';
+import type { TextEditAction } from '../common/editAction';
+import type { FileSystem } from '../common/fileSystem';
 import { LogTracker } from '../common/logTracker';
 import { getFileName, normalizeSlashes, stripFileExtension } from '../common/pathUtils';
 import * as StringUtils from '../common/stringUtils';
 import { DocumentRange, getEmptyRange, Position, TextRange } from '../common/textRange';
 import { TextRangeCollection } from '../common/textRangeCollection';
 import { timingStats } from '../common/timing';
-import { ModuleSymbolMap } from '../languageService/autoImporter';
-import { AbbreviationMap, CompletionOptions, CompletionResults } from '../languageService/completionProvider';
+import type { ModuleSymbolMap } from '../languageService/autoImporter';
+import type { AbbreviationMap, CompletionOptions, CompletionResults } from '../languageService/completionProvider';
 import { CompletionItemData, CompletionProvider } from '../languageService/completionProvider';
 import { DefinitionFilter, DefinitionProvider } from '../languageService/definitionProvider';
 import { DocumentHighlightProvider } from '../languageService/documentHighlightProvider';
@@ -45,22 +45,22 @@ import { SignatureHelpProvider, SignatureHelpResults } from '../languageService/
 import { Localizer } from '../localization/localize';
 import { ModuleNode } from '../parser/parseNodes';
 import { ModuleImport, ParseOptions, Parser, ParseResults } from '../parser/parser';
-import { Token } from '../parser/tokenizerTypes';
+import type { Token } from '../parser/tokenizerTypes';
 import { PyrightFileSystem } from '../pyrightFileSystem';
-import { AnalyzerFileInfo, ImportLookup } from './analyzerFileInfo';
+import type { AnalyzerFileInfo, ImportLookup } from './analyzerFileInfo';
 import * as AnalyzerNodeInfo from './analyzerNodeInfo';
 import { Binder } from './binder';
 import { Checker } from './checker';
-import { CircularDependency } from './circularDependency';
+import type { CircularDependency } from './circularDependency';
 import * as CommentUtils from './commentUtils';
-import { ImportResolver } from './importResolver';
-import { ImportResult } from './importResult';
+import type { ImportResolver } from './importResolver';
+import type { ImportResult } from './importResult';
 import { ParseTreeCleanerWalker } from './parseTreeCleaner';
-import { Scope } from './scope';
-import { SourceMapper } from './sourceMapper';
-import { SymbolTable } from './symbol';
+import type { Scope } from './scope';
+import type { SourceMapper } from './sourceMapper';
+import type { SymbolTable } from './symbol';
 import { TestWalker } from './testWalker';
-import { TypeEvaluator } from './typeEvaluator';
+import type { TypeEvaluator } from './typeEvaluator';
 
 const _maxImportCyclesPerFile = 4;
 

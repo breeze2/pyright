@@ -9,8 +9,8 @@
  */
 
 import { CancellationToken, CompletionItem, DocumentSymbol } from 'vscode-languageserver';
-import { TextDocumentContentChangeEvent } from 'vscode-languageserver-textdocument';
-import {
+import type { TextDocumentContentChangeEvent } from 'vscode-languageserver-textdocument';
+import type {
     CallHierarchyIncomingCall,
     CallHierarchyItem,
     CallHierarchyOutgoingCall,
@@ -19,14 +19,14 @@ import {
 } from 'vscode-languageserver-types';
 
 import { OperationCanceledException, throwIfCancellationRequested } from '../common/cancellationUtils';
-import { ConfigOptions, ExecutionEnvironment } from '../common/configOptions';
+import type { ConfigOptions, ExecutionEnvironment } from '../common/configOptions';
 import { ConsoleInterface, StandardConsole } from '../common/console';
 import { isDebugMode } from '../common/core';
 import { assert } from '../common/debug';
-import { Diagnostic } from '../common/diagnostic';
-import { FileDiagnostics } from '../common/diagnosticSink';
-import { FileEditAction, TextEditAction } from '../common/editAction';
-import { LanguageServiceExtension } from '../common/extensibility';
+import type { Diagnostic } from '../common/diagnostic';
+import type { FileDiagnostics } from '../common/diagnosticSink';
+import type { FileEditAction, TextEditAction } from '../common/editAction';
+import type { LanguageServiceExtension } from '../common/extensibility';
 import { LogTracker } from '../common/logTracker';
 import {
     combinePaths,
@@ -49,30 +49,30 @@ import {
     ModuleSymbolMap,
 } from '../languageService/autoImporter';
 import { CallHierarchyProvider } from '../languageService/callHierarchyProvider';
-import { AbbreviationMap, CompletionOptions, CompletionResults } from '../languageService/completionProvider';
-import { DefinitionFilter } from '../languageService/definitionProvider';
-import { IndexOptions, IndexResults, WorkspaceSymbolCallback } from '../languageService/documentSymbolProvider';
-import { HoverResults } from '../languageService/hoverProvider';
+import type { AbbreviationMap, CompletionOptions, CompletionResults } from '../languageService/completionProvider';
+import type { DefinitionFilter } from '../languageService/definitionProvider';
+import type { IndexOptions, IndexResults, WorkspaceSymbolCallback } from '../languageService/documentSymbolProvider';
+import type { HoverResults } from '../languageService/hoverProvider';
 import { ReferenceCallback, ReferencesResult } from '../languageService/referencesProvider';
-import { SignatureHelpResults } from '../languageService/signatureHelpProvider';
-import { ParseResults } from '../parser/parser';
-import { ImportLookupResult } from './analyzerFileInfo';
+import type { SignatureHelpResults } from '../languageService/signatureHelpProvider';
+import type { ParseResults } from '../parser/parser';
+import type { ImportLookupResult } from './analyzerFileInfo';
 import * as AnalyzerNodeInfo from './analyzerNodeInfo';
 import { CircularDependency } from './circularDependency';
-import { ImportResolver } from './importResolver';
+import type { ImportResolver } from './importResolver';
 import { ImportResult, ImportType } from './importResult';
 import { findNodeByOffset, getDocString } from './parseTreeUtils';
-import { Scope } from './scope';
+import type { Scope } from './scope';
 import { getScopeForNode } from './scopeUtils';
 import { SourceFile } from './sourceFile';
 import { SourceMapper } from './sourceMapper';
-import { Symbol } from './symbol';
+import type { Symbol } from './symbol';
 import { isPrivateOrProtectedName } from './symbolNameUtils';
 import { createTracePrinter } from './tracePrinter';
-import { TypeEvaluator } from './typeEvaluator';
+import type { TypeEvaluator } from './typeEvaluator';
 import { createTypeEvaluatorWithTracker } from './typeEvaluatorWithTracker';
 import { PrintTypeFlags } from './typePrinter';
-import { Type } from './types';
+import type { Type } from './types';
 import { TypeStubWriter } from './typeStubWriter';
 
 const _maxImportDepth = 256;

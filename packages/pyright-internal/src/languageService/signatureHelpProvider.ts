@@ -15,13 +15,13 @@ import { convertDocStringToMarkdown, convertDocStringToPlainText } from '../anal
 import { extractParameterDocumentation } from '../analyzer/docStringUtils';
 import * as ParseTreeUtils from '../analyzer/parseTreeUtils';
 import { getCallNodeAndActiveParameterIndex } from '../analyzer/parseTreeUtils';
-import { SourceMapper } from '../analyzer/sourceMapper';
-import { CallSignature, TypeEvaluator } from '../analyzer/typeEvaluator';
+import type { SourceMapper } from '../analyzer/sourceMapper';
+import type { CallSignature, TypeEvaluator } from '../analyzer/typeEvaluator';
 import { throwIfCancellationRequested } from '../common/cancellationUtils';
 import { convertPositionToOffset } from '../common/positionUtils';
-import { Position } from '../common/textRange';
+import type { Position } from '../common/textRange';
 import { CallNode, NameNode, ParseNodeType } from '../parser/parseNodes';
-import { ParseResults } from '../parser/parser';
+import type { ParseResults } from '../parser/parser';
 import { getDocumentationPartsForTypeAndDecl, getFunctionDocStringFromType } from './tooltipUtils';
 
 export interface ParamInfo {

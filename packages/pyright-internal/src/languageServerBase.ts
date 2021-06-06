@@ -25,7 +25,6 @@ import {
     ConfigurationItem,
     Connection,
     ConnectionOptions,
-    createConnection,
     Diagnostic,
     DiagnosticRelatedInformation,
     DiagnosticSeverity,
@@ -48,7 +47,8 @@ import {
     WorkDoneProgressReporter,
     WorkspaceEdit,
     WorkspaceFolder,
-} from 'vscode-languageserver/node';
+} from 'vscode-languageserver';
+import { createConnection } from 'vscode-languageserver/node';
 
 import { AnalysisResults } from './analyzer/analysis';
 import { BackgroundAnalysisProgram } from './analyzer/backgroundAnalysisProgram';

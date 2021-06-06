@@ -7,19 +7,19 @@
  * analysis running in a worker process.
  */
 
-import { CancellationToken } from 'vscode-languageserver';
-import { TextDocumentContentChangeEvent } from 'vscode-languageserver-textdocument';
+import type { CancellationToken } from 'vscode-languageserver';
+import type { TextDocumentContentChangeEvent } from 'vscode-languageserver-textdocument';
 
-import { BackgroundAnalysisBase } from '../backgroundAnalysisBase';
-import { ConfigOptions, ExecutionEnvironment } from '../common/configOptions';
-import { ConsoleInterface } from '../common/console';
-import { Diagnostic } from '../common/diagnostic';
-import { FileDiagnostics } from '../common/diagnosticSink';
-import { LanguageServiceExtension } from '../common/extensibility';
-import { Range } from '../common/textRange';
-import { IndexResults } from '../languageService/documentSymbolProvider';
+import type { BackgroundAnalysisBase } from '../backgroundAnalysisBase';
+import type { ConfigOptions, ExecutionEnvironment } from '../common/configOptions';
+import type { ConsoleInterface } from '../common/console';
+import type { Diagnostic } from '../common/diagnostic';
+import type { FileDiagnostics } from '../common/diagnosticSink';
+import type { LanguageServiceExtension } from '../common/extensibility';
+import type { Range } from '../common/textRange';
+import type { IndexResults } from '../languageService/documentSymbolProvider';
 import { AnalysisCompleteCallback, analyzeProgram } from './analysis';
-import { ImportResolver } from './importResolver';
+import type { ImportResolver } from './importResolver';
 import { Indices, MaxAnalysisTime, Program } from './program';
 
 export class BackgroundAnalysisProgram {

@@ -9,9 +9,9 @@
 
 import { assertNever, fail } from '../common/debug';
 import { convertPositionToOffset } from '../common/positionUtils';
-import { Position } from '../common/textRange';
+import type { Position } from '../common/textRange';
 import { TextRange } from '../common/textRange';
-import { TextRangeCollection } from '../common/textRangeCollection';
+import type { TextRangeCollection } from '../common/textRangeCollection';
 import {
     ArgumentCategory,
     ArgumentNode,

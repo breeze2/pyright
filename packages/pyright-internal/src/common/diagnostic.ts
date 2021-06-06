@@ -7,9 +7,9 @@
  * Class that represents errors and warnings.
  */
 
-import { Commands } from '../commands/commands';
-import { DiagnosticLevel } from './configOptions';
-import { Range } from './textRange';
+import type { Commands } from '../commands/commands';
+import type { DiagnosticLevel } from './configOptions';
+import type { Range } from './textRange';
 
 const defaultMaxDepth = 5;
 const defaultMaxLineCount = 8;

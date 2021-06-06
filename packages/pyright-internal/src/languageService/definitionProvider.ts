@@ -10,20 +10,20 @@
  * definition is the top of the resolved import file.
  */
 
-import { CancellationToken } from 'vscode-languageserver';
+import type { CancellationToken } from 'vscode-languageserver';
 
 import { getFileInfo } from '../analyzer/analyzerNodeInfo';
 import { DeclarationType, isFunctionDeclaration } from '../analyzer/declaration';
 import * as ParseTreeUtils from '../analyzer/parseTreeUtils';
 import { isStubFile, SourceMapper } from '../analyzer/sourceMapper';
-import { TypeEvaluator } from '../analyzer/typeEvaluator';
+import type { TypeEvaluator } from '../analyzer/typeEvaluator';
 import { isOverloadedFunction } from '../analyzer/types';
 import { throwIfCancellationRequested } from '../common/cancellationUtils';
 import { isDefined } from '../common/core';
 import { convertPositionToOffset } from '../common/positionUtils';
 import { DocumentRange, Position, rangesAreEqual } from '../common/textRange';
 import { ParseNodeType } from '../parser/parseNodes';
-import { ParseResults } from '../parser/parser';
+import type { ParseResults } from '../parser/parser';
 
 export enum DefinitionFilter {
     All = 'all',

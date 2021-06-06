@@ -37,10 +37,10 @@ import * as AnalyzerNodeInfo from './analyzerNodeInfo';
 import * as ParseTreeUtils from './parseTreeUtils';
 import { ParseTreeWalker } from './parseTreeWalker';
 import { getScopeForNode } from './scopeUtils';
-import { SourceFile } from './sourceFile';
-import { Symbol } from './symbol';
+import type { SourceFile } from './sourceFile';
+import type { Symbol } from './symbol';
 import * as SymbolNameUtils from './symbolNameUtils';
-import { TypeEvaluator } from './typeEvaluator';
+import type { TypeEvaluator } from './typeEvaluator';
 import { isFunction, isNever, isUnknown, removeUnknownFromUnion } from './types';
 
 class TrackedImport {

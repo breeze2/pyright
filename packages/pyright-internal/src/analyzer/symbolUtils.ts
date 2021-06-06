@@ -9,7 +9,7 @@
 
 import { Declaration, DeclarationType } from './declaration';
 import { isFinalVariableDeclaration } from './declarationUtils';
-import { Symbol } from './symbol';
+import type { Symbol } from './symbol';
 
 export function getLastTypedDeclaredForSymbol(symbol: Symbol): Declaration | undefined {
     const typedDecls = symbol.getTypedDeclarations();

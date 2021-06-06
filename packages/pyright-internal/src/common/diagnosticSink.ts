@@ -7,11 +7,11 @@
  * Class that represents errors and warnings.
  */
 
-import { DiagnosticLevel } from './configOptions';
+import type { DiagnosticLevel } from './configOptions';
 import { Diagnostic, DiagnosticAction, DiagnosticCategory } from './diagnostic';
 import { convertOffsetsToRange } from './positionUtils';
-import { Range, TextRange } from './textRange';
-import { TextRangeCollection } from './textRangeCollection';
+import type { Range, TextRange } from './textRange';
+import type { TextRangeCollection } from './textRangeCollection';
 
 // Represents a collection of diagnostics within a file.
 export interface FileDiagnostics {

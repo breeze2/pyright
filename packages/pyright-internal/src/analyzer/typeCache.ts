@@ -9,7 +9,7 @@
  */
 
 import { assert } from '../common/debug';
-import { ParseNode } from '../parser/parseNodes';
+import type { ParseNode } from '../parser/parseNodes';
 import * as ParseTreeUtils from './parseTreeUtils';
 import { isTypeSame, Type } from './types';
 

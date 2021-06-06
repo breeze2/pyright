@@ -6,10 +6,10 @@
 * Language service completion list extensibility.
 */
 
-import { CancellationToken } from 'vscode-languageserver';
+import type { CancellationToken } from 'vscode-languageserver';
 
-import { CompletionResults } from '../languageService/completionProvider';
-import { ParseResults } from '../parser/parser';
+import type { CompletionResults } from '../languageService/completionProvider';
+import type { ParseResults } from '../parser/parser';
 
 export interface LanguageServiceExtension {
     readonly completionListExtension: CompletionListExtension;

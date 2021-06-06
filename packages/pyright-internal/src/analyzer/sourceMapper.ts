@@ -8,7 +8,7 @@
 
 import * as AnalyzerNodeInfo from '../analyzer/analyzerNodeInfo';
 import * as ParseTreeUtils from '../analyzer/parseTreeUtils';
-import { ExecutionEnvironment } from '../common/configOptions';
+import type { ExecutionEnvironment } from '../common/configOptions';
 import { isDefined } from '../common/core';
 import { getAnyExtensionFromPath } from '../common/pathUtils';
 import { ClassNode, ModuleNode, ParseNode, ParseNodeType } from '../parser/parseNodes';
@@ -26,9 +26,9 @@ import {
     SpecialBuiltInClassDeclaration,
     VariableDeclaration,
 } from './declaration';
-import { ImportResolver } from './importResolver';
-import { SourceFile } from './sourceFile';
-import { TypeEvaluator } from './typeEvaluator';
+import type { ImportResolver } from './importResolver';
+import type { SourceFile } from './sourceFile';
+import type { TypeEvaluator } from './typeEvaluator';
 import { ClassType, isClass, isFunction, isOverloadedFunction } from './types';
 import { lookUpClassMember } from './typeUtils';
 
